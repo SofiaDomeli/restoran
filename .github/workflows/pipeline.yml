@@ -10,9 +10,9 @@ name: Deno
 
 on:
   push:
-    branches: ["main"]
+    branches: ["dev"]
   pull_request:
-    branches: ["main"]
+    branches: ["dev"]
 
 permissions:
   contents: read
@@ -25,14 +25,8 @@ jobs:
       - name: Setup repo
         uses: actions/checkout@v4
 
-      - name: Setup Deno
-        # uses: denoland/setup-deno@v1
-        uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31  # v1.1.2
-        with:
-          deno-version: v1.x
-
       - name: Render Deploy Action
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          service-id: srv-croerb56l47c73fn516g
+          service-id: srv-crr8c2d6l47c73cf24sg
           api-key: rnd_klhMvPyDbq4rsEaVmgX5uqwQlsW9
